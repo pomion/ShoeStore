@@ -1,0 +1,50 @@
+﻿@using ShoeStore.Models
+@model List<Giohang>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<h2 style=" text-align:center">Thông tin Giỏ Hàng</h2>
+<table align="center" border ="1"> 
+    <tr style="text-align:center; font-weight:bold">
+        <td>Mã Giày</td>
+        <td>Tên Giày</td>
+        <td>Ảnh Bìa</td>
+        <td>Số Lượng</td>
+        <td>Đơn Giá</td>
+        <td>Thành Tiền</td>
+        <td width="50px"></td>
+        <td width="50px"></td>
+        <td width="50px"></td>
+    </tr>
+    @foreach(var item in Model)
+            {
+<tr style="text-align:center; font-weight:bold">
+    <td>@item.iMagiay</td>
+    <td>@item.sTengiay</td>
+    <td><img src="~/Hinhsanpham/@item.sAnhbia"></td>
+    @using (Html.BeginForm("CapNhatGioHang", "Giohang", new { @iMaSp = item.iMagiay }))
+    {
+        <td>
+            <input type="number" min="1" name="txtSoluong" value="@item.iSoluong" style="background-color:yellowgreen"/>
+        </td>
+        <td>@string.Format("{0:0,0}", item.dDongia)</td>
+        <td>@String.Format("{0:0,0}", item.dThanhtien)</td>
+        <td><a href="@Url.Action("Details", "ShoeStore", new { id = item.iMagiay})"> Chi Tiết </a></td>
+        <td>@Html.ActionLink("Xóa", "XoaGioHang", new { @iMaSp = item.iMagiay })</td>
+        <td><input type="submit" value="Cập Nhật"/></td>
+    }
+
+</tr>
+            }
+    <tr style="font-weight:bold; text-align:right; color:orangered">
+        <td colspan="4">Số lượng giày: @ViewBag.Tongsoluong</td>
+        <td colspan="5">Tổng Tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ </td>
+    </tr>
+    <tr style="font-weight: bold; color:dodgerblue; text-align:right">
+        <td colspan="9">
+            @Html.ActionLink("Xóa Giỏ Hàng", "XoaTatCaGioHang")
+        </td>
+    </tr>
+</table>
+

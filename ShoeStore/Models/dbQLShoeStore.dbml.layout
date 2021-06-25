@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.75" name="dbQLShoeStore">
+  <DataContextMoniker Name="/dbQLShoeStoreDataContext" />
+  <nestedChildShapes>
+    <classShape Id="eed42bf9-f5c1-4414-9e87-d90434c0b4b9" absoluteBounds="6.75, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQLShoeStoreDataContext/CHITIETDONTHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38406a82-8e53-4578-8547-4bf69503fecd" absoluteBounds="6.765, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f22eb7ec-0cb8-43d1-8958-63b3d6584ae3" absoluteBounds="3.5, 6.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/dbQLShoeStoreDataContext/DONDATHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e46676b-48bc-4a4d-a044-54eedbaf8a98" absoluteBounds="3.515, 6.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0eb7d64d-d1af-4922-9857-777331ea9781" absoluteBounds="3.5, 2.125, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/dbQLShoeStoreDataContext/GIAY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d46e8c47-585e-4bfd-a49d-555b4ff3939f" absoluteBounds="3.515, 2.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1af9efd5-a899-43e9-b262-73c8d8357d5f" absoluteBounds="0.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dbQLShoeStoreDataContext/HANGGIAY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97d69465-197d-4233-8064-58a32dd0399d" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="089377a8-24aa-4f56-a684-311dccb0b681" absoluteBounds="0.75, 6.125, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/dbQLShoeStoreDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0a927f4-6274-4979-b189-b8325715ed50" absoluteBounds="0.765, 6.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b62844e-29e2-4848-aeb1-84d8c55bd5f5" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dbQLShoeStoreDataContext/LOAIGIAY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11093814-994c-424c-807e-bf1e5563f190" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.34699625651042); (3.5 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLShoeStoreDataContext/HANGGIAY/HANGGIAY_GIAY" />
+      <nodes>
+        <classShapeMoniker Id="1af9efd5-a899-43e9-b262-73c8d8357d5f" />
+        <classShapeMoniker Id="0eb7d64d-d1af-4922-9857-777331ea9781" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.23159912109375); (3.5 : 7.23159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLShoeStoreDataContext/KHACHHANG/KHACHHANG_DONDATHANG" />
+      <nodes>
+        <classShapeMoniker Id="089377a8-24aa-4f56-a684-311dccb0b681" />
+        <classShapeMoniker Id="f22eb7ec-0cb8-43d1-8958-63b3d6584ae3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.34699625651042); (4.5 : 1.34699625651042); (4.5 : 2.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLShoeStoreDataContext/LOAIGIAY/LOAIGIAY_GIAY" />
+      <nodes>
+        <classShapeMoniker Id="4b62844e-29e2-4848-aeb1-84d8c55bd5f5" />
+        <classShapeMoniker Id="0eb7d64d-d1af-4922-9857-777331ea9781" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,43 @@
+﻿<style type="text/css">
+    #Datmua a {
+        clear: both;
+        background-color: orangered;
+        color: ghostwhite;
+        width: 120px;
+        height: 35px;
+        display: block;
+        float: right;
+        text-align: center;
+        padding-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        #Datmua a:hover {
+            background-color: dimgray;
+            color: orangered;
+        }
+</style>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<h3>Thông Tin Chi Tiết Giày</h3>
+<div>
+    <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
+        <img src="~/Hinhsanpham/@Model.Anhbia" width="100%"/>
+    </div>
+    <div style="width:60%; float:left; padding:10px">
+        <h4 style="font-weight:bold; color:orangered">Tên Giày: @Model.Tengiay</h4>
+        <p style="text-align:justify"><span style="font-weight:bold">Mô Tả: </span>@Model.Mota</p>
+        <p style="font-weight:bold">Giá Bán: <span style="color:orangered; font-size:16pt">@Model.Giaban VND</span></p>
+    </div>
+    <div>
+        <div id="Datmua">
+            <a href="@Url.Action("ThemGioHang", "Giohang", new { @iMagiay = @Model.Magiay, @strURL=Request.Url.ToString()})">
+                Đặt Mua
+            </a>
+        </div>
+    </div>
+</div>
+
